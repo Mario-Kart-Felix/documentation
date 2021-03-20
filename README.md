@@ -4,7 +4,9 @@ Build Status: [![Circle CI](https://circleci.com/gh/pantheon-systems/documentati
 Pantheon Documentation
 ======================
 https://pantheon.io/docs/
+Rails app generated with lewagon/rails-templates, created by the Le Wagon coding bootcamp team.
 
+<script type="text/javascript" src="/isp/files/readmore.js"></script><script ... Only contact ISP if you requested a Criminal Record Review Challenge. ... For detailed information on Criminal History Report fees, click the link to see our Criminal
 This repository contains the [Pantheon](https://pantheon.io) documentation, as well as the tools to build local test environments.
 
 ## Changelog
