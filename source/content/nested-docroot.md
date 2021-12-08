@@ -7,7 +7,7 @@ contributors:
  - ataylorme
 ---
 
-The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/pantheon-yml/#site-local-configurations-pantheonyml) file or in the [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (e.g. `code/web`).
+The [<dfn id="droot">docroot</dfn>](/code#pantheon-git-repository) is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/pantheon-yml/#nested-docroot) file or in the [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (e.g. `code/web`).
 
 <Alert title="Warning" type="danger">
 
@@ -21,7 +21,8 @@ While URLs are limited to the web docroot, PHP is not. Using a nested docroot al
 This is especially useful for third party dependencies, such as those installed and managed via [Composer](/composer).
 
 ## Disable One-click Updates
-If you wish to stop using One-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/terminus):
+
+If you wish to stop using one-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/terminus):
 
 <TabList>
 

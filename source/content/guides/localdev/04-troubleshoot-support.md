@@ -30,7 +30,7 @@ Before contacting Support, review the [support request best practices](/support#
 
 ## Provide Feedback or Feature Requests
 
-Please submit feedback and feature requests through the [Pantheon Localdev Customer Feedback](https://docs.google.com/forms/d/e/1FAIpQLSdy2WU7H3bSd94YmEuTvGhzmmT_xP3LlCgORXOkTt-M8UIAXw/viewform) form.
+Please provide feedback by submitting an issue to the [GitHub repository](https://github.com/pantheon-systems/localdev-issues/issues) or by joining the [Pantheon community](https://pantheon.io/docs/pantheon-community#joining-the-community).
 
 ## Troubleshooting
 
@@ -96,3 +96,8 @@ You can verify which version of PHP your site is using by clicking **Launch Term
 ### Can I create Multidev environments from Localdev?
 
 No, new Multidev environments must still be created from the Site Dashboard or [Terminus](/terminus/commands/multidev-create).
+
+### Can I setup Localdev with a Mac that has an M1 chip?
+
+No, Macs with the M1 chip are not currently supported.
+

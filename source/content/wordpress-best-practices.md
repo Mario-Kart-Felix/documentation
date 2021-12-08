@@ -15,7 +15,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Do not modify core WordPress files as it can cause unintended consequences, and can [prevent you from updating your site regularly](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts). If you need to modify any WP functionality, do it as a custom or [Must Use](/mu-plugin) plugin, which adheres to the [WP.org Plugin best practices](https://developer.wordpress.org/plugins/the-basics/best-practices/).
 
-* Use [Redis](/redis). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to cache a lot of database queries in WordPress.
+* Use [Redis](/object-cache). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to cache a lot of database queries in WordPress.
 
 * Use [wp-cfm](/wp-cfm). It lets you store settings from the `wp_options` table in Git and pull it into the database. A lot of WordPress stuff is option-heavy and you can spend a lot of time trying to figure out what you missed between environments. This is true for all WordPress sites, but especially helpful on Pantheon where you have at least three environments you will need to reconfigure every time.
 
@@ -31,6 +31,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Don't use plugins that create files vital to your site logic that you aren't willing to track in Git. Sometimes they're dumped in uploads, sometimes not, and you'll likely have difficulty trying to figure it out later. You'd be surprised how many uploads-type plugins rely on `.htaccess` files — avoid those as well.
 
+
 ### Themes
 
 * In your theme, use a simple PHP `include()` instead of WordPress's [get_template_part()](https://codex.wordpress.org/Function_Reference/get_template_part). The overhead is heavy if your use case is simply adding in another sub-template file. For example:
@@ -39,6 +40,11 @@ This article provides suggestions, tips, and best practices for developing and m
   <?php get_template_part('content', 'sidebar'); ?>
   <?php include('content-sidebar.php'); ?>
   ```
+  
+#### Manage License Keys for Themes or Plugins
+
+There are many plugins and themes in WordPress that require license keys. Since Dev and Multidev are the only writable environments in SFTP mode, it is best practice to associate the license key in a domain so you can easily update and deploy the updates to Test and Live environments. 
+
 
 ## Testing
 
@@ -117,6 +123,10 @@ This method has the advantage of being toggleable without deploying code, by act
   ```
 
 1. Commit your work, deploy code changes then activate the plugin on Test and Live environments.
+
+## Avoid WordPress Login Attacks
+
+<Partial file="wp-login-attacks.md" />
 
 ## Security Headers
 

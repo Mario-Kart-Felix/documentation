@@ -21,7 +21,7 @@ In some circumstances, a 401 can be triggered inadvertently if a site environmen
 ### Pantheon 403 Forbidden
 "Access denied to uploaded PHP files." This message is shown when a PHP file is attempted to be accessed in Valhalla, Pantheon's network file system.
 
-Pantheon also prevents public access via the webserver to private files, .htaccess, and directory listings.
+Pantheon also prevents public access via the web server to private files, `.htaccess`, and directory listings.
 
 ### Pantheon 404 Unknown Site
 "The hostname ... is unknown. Please double-check that this is the right URL. If so, make sure it matches your Dashboard's custom domain settings." This typically is shown when there is an internal routing problem or a site environment does not exist.
@@ -181,7 +181,7 @@ Even with logging disabled, these errors will still be written to the server PHP
 
 ### Optimize the Site
 
-Long running processes like batch jobs, background tasks, and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic Pro](/new-relic) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
+Long running processes like batch jobs, background tasks, and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic&reg; Performance Monitoring](/new-relic) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
 
 
 ### Upgrade Your Plan
@@ -193,7 +193,7 @@ If the all the errors have been resolved and the views, batches and tasks have b
 
 There's no accounting for buggy code. We've seen bugs ranging from Drupal running cron on every page load, to the Drupal module `advanced_help` spidering the entire code tree looking for help files cause sufficiently slow page load times to trigger timeouts.
 
-If you are seeing timeouts in unexpected places, debugging with New Relic Pro or looking at your php slow logs can be informative.
+If you are seeing timeouts in unexpected places, debugging with New Relic&reg; Performance Monitoring or looking at your php slow logs can be informative.
 
 ## Admin Work-Arounds
 

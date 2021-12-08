@@ -10,9 +10,9 @@ searchboost: 200
 
 Pantheon's new [Global CDN](/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform.
 
-<Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Get the most out of Global CDN with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal WebOps.
+Get the most out of Global CDN with help from the experts at Pantheon. We deliver on-demand training to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 
@@ -30,6 +30,8 @@ For more detailed instructions pertaining to your specific DNS host, click below
 
 <DNSProviderDocs />
 
+If you are having difficulties issuing a [Let's Encrypt](https://letsencrypt.org) certificate you can run diagnostics at [Let's Debug](https://letsdebug.net/). This tool can identify an array of issues specifically for [Let's Encrypt](https://letsencrypt.org) certificates including problems with DNS, nameservers, networking issues, common website misconfigurations, and CA policy issues.
+
 </Accordion>
 
 <Partial file="enable-https.md" />
@@ -39,6 +41,8 @@ For more detailed instructions pertaining to your specific DNS host, click below
 [Let's Encrypt](https://letsencrypt.org) is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a goal we share. Pantheon automatically provisions a Let's Encrypt certificate for your site, and always renews it automatically, for no additional cost. Let's Encrypt issued certs are valid for 90 days and we renew them 30 days before expiration.
 
 <Partial file="https-requirements.md" />
+
+## Technical Specifications
 
 <Partial file="tables/https-specs.md" />
 
@@ -62,13 +66,13 @@ Upgrade your site to the Global CDN and then send the [HSTS header](/pantheon-ym
 
 ### Can I bring my own certificate?
 
-Yes. See our page on [custom certificates](https://pantheon.io/docs/custom-certificates/) for more information.
+Yes. See our page on [custom certificates](/custom-certificates) for more information.
 
 But you shouldn't need to buy a custom certificate or worry about renewals in most cases. For example, wildcard certificates aren't necessary to secure communications for multiple domains, because we will automatically deploy certificates for all domains on your site. The certificates provided by Pantheon on the Global CDN provide end-to-end encryption.
 
 Some customers have purchased expensive certificates, often through an upsell from the certificate authority. Unfortunately, an expensive certificate does not mean increased security. If in doubt, we encourage you to test your site with SSL Labs, compare it to this [A+ report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io), and share it with your client.
 
-If bringing your own certificate is a hard requirement, then we recommend terminating HTTPS through a 3rd-party CDN service provider like Cloudflare, CloudFront, StackPath, etc. Configuration differs depending on provider, so please [contact support](https://pantheon.io/docs/support/) to discuss your case.
+If bringing your own certificate is a hard requirement, then we recommend terminating HTTPS through a 3rd-party CDN service provider like Cloudflare, CloudFront, StackPath, etc. Configuration differs depending on provider, so please [contact support](/support) to discuss your case.
 
 ### Is HTTPS encryption end-to-end?
 

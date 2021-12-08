@@ -17,9 +17,9 @@ Manually migrate your site to Pantheon when any of the following apply:
 
 If none of the above apply to your project, use the [standard migration procedure](/migrate).
 
-<Alert title="Note" type="info" >
+<Alert title="Note for Composer-based Sites" type="info" >
 
-The steps outlined below do not work for Composer-based sites. If you have need help migrating a Composer-based site (or any site, for that matter), site migrations are one of the services offered by our [Professional Services](/professional-services/#site-migrations) team.
+The steps outlined below do not work for Composer-based sites. If you have need help migrating a Composer-based site (or any site, for that matter), site migrations are one of the services offered by our [Professional Services](/guides/professional-services/website-migration-service) team.
 
 </Alert>
 
@@ -30,7 +30,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 - Read [Platform Considerations](/platform-considerations)
 - Upgrade to the latest version of WordPress or Drupal core
 - Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
-- Make sure your code is compatible with PHP 7.2. If not, be prepared to [adjust PHP versions](/php-versions/#configure-php-version)
+- Make sure your code is compatible with PHP 7.2 or greater. Review your [CMS's PHP version requirements](/php-versions#cms-version-requirements). You may need to [adjust PHP versions](/php-versions/#configure-php-version).
 - Clear all caches
 - Remove unneeded code, database tables, and files
 - [Configure SSH keys](/ssh-keys)
@@ -51,7 +51,7 @@ mv sites/default/{settings.php,settings.local.php}
 chmod u-w sites/default/{settings.local.php,.}
 ```
 
-Drupal 8 sites running on Pantheon come with a bundled `settings.php` that includes the `settings.local.php` file, so no additional steps are required. However, sites running Drupal 6 or 7 must add a `settings.php` file that includes `settings.local.php`, as this file is not bundled on Pantheon.
+Drupal 8 sites running on Pantheon come with a bundled `settings.php` that includes the `settings.local.php` file, so no additional steps are required. However, sites running Drupal 7 must add a `settings.php` file that includes `settings.local.php`, as this file is not bundled on Pantheon.
 
 </Accordion>
 
