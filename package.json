@@ -46,7 +46,7 @@
     "gatsby-remark-static-images": "^1.2.1",
     "gatsby-source-filesystem": "^3.9.0",
     "gatsby-transformer-json": "^3.9.0",
-    "gatsby-transformer-remark": "^4.6.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^3.9.0",
     "gatsby-transformer-yaml": "^3.9.0",
     "highlight.js": "^11.1.0",
